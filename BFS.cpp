@@ -19,6 +19,7 @@ public:
         }
     }
 
+    // 计算所有连通块的大小
     int BFS(){
         vector<vector<bool>> v(m, vector<bool>(n, false));
         int ans = 0;
@@ -33,6 +34,7 @@ public:
         return ans;
     }
 
+    // 从 (r, c) 开始进行 BFS，返回连通块的大小
     int bfs(vector<vector<bool>>& v, int r, int c){
         if (r < 0 || r >= m || c < 0 || c >= n) return 0;  // 检查边界
         if (matrix[r][c] != 0 || v[r][c]) return 0;  // 只处理值为 0 且未访问的位置
