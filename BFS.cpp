@@ -64,13 +64,16 @@ public:
 };
 
 int main(){
-    int t;
-    cin >> t;
-    while (t--){
-        int m, n;
-        cin >> m >> n;
-        Graph g(m, n);
-        cout << g.BFS() << endl;
-    }
+    // 边界测试
+    int m = 3, n = 3;
+    vector<vector<int>> matrix = {{0, 0, 0}, {0, 1, 0}, {0, 0, 0}};
+    Graph g(m, n);
+    cout << g.BFS() << endl;
+
+    // 测试连通块数量
+    m = 4, n = 4;
+    matrix = {{0, 1, 0, 0}, {0, 0, 0, 1}, {1, 0, 0, 0}, {0, 0, 1, 0}};
+    g = Graph(m, n);
+    cout << g.BFS() << endl;
     return 0;
 }
