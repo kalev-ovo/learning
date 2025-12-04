@@ -158,7 +158,7 @@ int main(int argc, char** argv)
 #endif
 
 	// 配置窗口属性
-	GLFWwindow* window = glfwCreateWindow(600, 600, u8"2023150016_杨迦勒_实验4", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(600, 600, u8"纹理模型_4", NULL, NULL);
 	if (window == NULL)
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
